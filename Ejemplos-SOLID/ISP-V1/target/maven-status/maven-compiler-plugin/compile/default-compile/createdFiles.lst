@@ -1,0 +1,11 @@
+com\mycompany\isp\v1\ISPV1.class
+com\mycompany\isp\v1\Automovil.class
+com\mycompany\isp\v1\Concesionario.class
+com\mycompany\isp\v1\Motocicleta.class
+com\mycompany\isp\v1\Vehiculo.class
+com\mycompany\isp\v1\VehiculoCuatroRuedasOMayor.class
+com\mycompany\isp\v1\Bus.class
+com\mycompany\isp\v1\VehiculoDosRuedas.class
+com\mycompany\isp\v1\Vendedor.class
+com\mycompany\isp\v1\Cliente.class
+com\mycompany\isp\v1\Persona.class

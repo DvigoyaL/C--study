@@ -1,0 +1,45 @@
+create database factoryMetodo;
+
+use factoryMetodo;
+-- Crear la tabla clientes
+CREATE TABLE clientes (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(255) NOT NULL,
+    apellido VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL
+);
+
+-- Crear la tabla direccion
+CREATE TABLE direccion (
+    idAdress INT PRIMARY KEY AUTO_INCREMENT,
+    fk_cliente INT,
+    pais VARCHAR(255) NOT NULL,
+    direccion VARCHAR(255) NOT NULL,
+    zipCode INT NOT NULL,
+    FOREIGN KEY (fk_cliente) REFERENCES clientes(id) ON DELETE CASCADE
+);
+
+CREATE TABLE productos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255),
+    precio DOUBLE,
+    stock INT
+);
+
+CREATE TABLE envios (
+    id_envio INT AUTO_INCREMENT PRIMARY KEY,
+    id_cliente INT,
+    id_producto INT,
+    id_direccion INT,
+    FOREIGN KEY (id_cliente) REFERENCES clientes(id) ON DELETE CASCADE,
+    FOREIGN KEY (id_producto) REFERENCES productos(id) ON DELETE CASCADE,
+    FOREIGN KEY (id_direccion) REFERENCES direccion(idAdress) ON DELETE CASCADE
+);
+
+CREATE TABLE productos2 (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255),
+    precio DOUBLE,
+    stock INT
+);
+
